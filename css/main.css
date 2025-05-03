@@ -1,0 +1,1244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* GENERAL!!!!!! */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color1: #ffffff;
+  --color2: #3a58dc;
+  --color3: #ffffff;
+  --color4: #ffffff;
+  --color5: #ff0000;
+  --color6: #000000;
+}
+
+body {
+  background: #000000;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header section */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+  background: transparent;
+  transition: 0.5s;
+  z-index: 1100;
+}
+
+header.header-scrolled {
+  padding: 15px 100px;
+  background: rgb(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+
+
+}
+
+.logo {
+  position: relative;
+  font-size: 30px;
+  color: var(--color4);
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav li {
+  position: relative;
+  list-style: none;
+  margin: 0 20px;
+}
+
+.nav li a {
+  color: var(--color4);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 300;
+  font-size: 1em;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+
+.nav li a:hover {
+  color: var(--color2);
+}
+
+.util {
+  display: flex;
+  align-items: center;
+}
+
+.util li {
+  position: relative;
+  list-style: none;
+  margin: 0 10px;
+}
+
+.util li a {
+  text-decoration: none;
+  color: var(--color4);
+  transition: 0.5s;
+}
+
+.util li a ion-icon {
+  font-size: 1.5em;
+}
+
+.util li a:hover {
+  color: var(--color2);
+}
+
+.util li .number {
+  position: absolute;
+  right: -1px;
+  bottom: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color5);
+  color: var(--color1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6em;
+  font-weight: 400;
+}
+
+/* Mobile Menu and Navigation */
+.menu {
+  display: none;
+  transition: 0.5s;
+}
+
+.menu ion-icon {
+  color: #ffffff;
+  font-size: 1.6em ;
+}
+
+.menu.active {
+  transform: rotateZ(45deg);
+}
+.nav-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: 900;
+  gap: 20px;
+}
+.nav-mobile.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-mobile li {
+  position: relative;
+  list-style: none;
+}
+
+.nav-mobile li a{
+  color:#ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 300;
+  padding: 10px
+}
+
+/* Hero Banner section */
+#banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transform: translate(0px, 0px); /* Move image: 20px left, 30px down */
+}
+
+/* Make the shade for the images */
+.women::before,
+.men::before,
+.special::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1717173c;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+/*Remove the shade on hover */
+.women:hover::before,
+.men:hover::before,
+.special:hover::before {
+  background: transparent;
+}
+
+.women {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  background: var(--color6);
+  position: 50% 80%;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.men {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  height: 100%;
+  width: 40%;
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
+  background: var(--color6);
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.special {
+  position: absolute;
+  top: 0;
+  left: 60%;
+  height: 100%;
+  width: 40%;
+  clip-path: polygon(25% 0%, 100% 0, 100% 100%, 25% 100%, 0% 50%);
+  background: var(--color6);
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#banner.left .women,
+#banner.middle .men,
+#banner.right .special {
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0% 50%);
+  transition: 1s;
+}
+
+#banner.right .special {
+  left: 0;
+}
+
+#banner.middle .men {
+  left: 0;
+}
+
+#banner.left .men,
+#banner.left .special {
+  left: 120%;
+}
+
+#banner.right .men,
+#banner.right .women {
+  left: -120%;
+}
+
+#banner.middle .women {
+  left: -120%;
+}
+
+#banner.middle .special {
+  left: 120%;
+}
+
+/* Make all images fit well in clipPath */
+.women img,
+.men img,
+.special img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(0px, 0px); /* Move image: 20px left, 30px down */
+  object-position: center;
+  transition: 0.5s;
+}
+
+#banner.left .women img {
+  width: 50%;
+  right: 50%;
+}
+
+#banner.middle .men img {
+  left: 50%;
+  width: 50%;
+}
+#banner.right .special img {
+  width: 50%;
+  left: 50%;
+}
+
+/* Banner switch button */
+.switch-btn {
+  position: relative;
+  text-decoration: none;
+  color: var(--color3);
+  text-transform: uppercase;
+  font-size: 5em;
+  font-weight: 300%;
+  margin-top: 30%;
+  z-index: 1000;
+  transition: 0.5s;
+  transform: scale(1);
+}
+
+.switch-btn:hover {
+  transform: scale(1.2);
+  color: var(--color2);
+}
+
+/* Banner Reset button */
+
+.reset {
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+.reset.active {
+  transform: rotateZ(180deg);
+}
+
+.reset ion-icon {
+  color: var(--color1);
+  font-size: 3em;
+  transition: 0.3s;
+}
+
+.reset ion-icon:hover {
+  color: var(--color5);
+}
+
+/* Banner Content */
+#banner .content {
+  position: absolute;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: 900;
+}
+
+#banner .content h1 {
+  color: aliceblue;
+  font-size: 4.5em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#banner .content p {
+  color: #ffffff;
+  font-weight: 200;
+  font-size: 1em;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+#banner .content a {
+  position: relative;
+  width: 200px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: 1px solid #ffffff;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#banner .content a ion-icon {
+  font-size: 1.2em;
+}
+#banner .content a:hover {
+  background: #ffffff;
+  color: var(--color5);
+}
+#banner.left .women .content,
+#banner.middle .men .content,
+#banner.right .special .content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.women .content {
+  left: 55%;
+}
+
+.men .content,
+.special .content {
+  right: 55%;
+}
+
+/* Main Section */
+main {
+  width: 100%;
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+/* Call up Section */
+section.call-up {
+  width: 100%;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.call-up-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  box-shadow: 0 0 10px #0a0a0a;
+  background: #ffffff;
+}
+
+.call-up-box ion-icon {
+  font-size: 10em;
+  color: var(--color2);
+}
+
+.call-up-box h4 {
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #093375;
+}
+
+.call-up-box p {
+  font-weight: 300;
+  color: #093375;
+}
+
+/* About Section */
+.about {
+  padding: 100px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+  width: 100%;
+}
+
+.about .left,
+.about .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3px;
+}
+
+.promotion,
+.discovery {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  padding: 50px;
+}
+
+.style,
+.collection {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  padding: 50px;
+}
+
+.about-box {
+  overflow: hidden;
+}
+
+.about-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  object-fit: cover;
+  object-position: center;
+  transition: 1s;
+}
+
+.about-box:hover img {
+  transform: scale(1.1);
+}
+
+/* A darker shade for the box */
+.about-box::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0000009f;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
+}
+
+.about-box:hover::after {
+  background: #00000053;
+}
+
+.about .description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 900;
+}
+
+.about .description h4 {
+  position: relative;
+  color: #ffffff;
+  font-size: 2.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.about .description h4::after {
+  position: absolute;
+  content: '';
+  background: var(--color2);
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+.about .description p {
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.about a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 300;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.5s;
+}
+
+.about a:hover {
+  gap: 20px;
+  color: var(--color2);
+}
+
+/* Products Section */
+.products {
+  position: relative;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+}
+
+#product-filters {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  color: #093375;
+}
+
+#product-filters li {
+  position: relative;
+  list-style: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+#product-filters li:before {
+  position: absolute;
+  content: '';
+  bottom: -10px;
+  left: 50%;
+  height: 3px;
+  transform: translate(-50%);
+  width: 80%;
+  background: var(--color2);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#product-filters li:hover:before,
+#product-filters li.filter-active::before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.product-container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-item {
+  position: relative;
+  width: 24%;
+  height: 450px;
+  background: #cedfff;
+  box-shadow: 0 0 10px #1d1c1c;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.product-item img {
+  position: relative;
+  transform: scale(1);
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  transition: 1s;
+  transform-origin: bottom;
+}
+
+.product-item img:hover {
+  transform: scale(1.1);
+}
+
+.product-info {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+}
+
+.product-info h4 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.product-info p {
+  font-weight: 300;
+  color: #093375;
+}
+
+.product-info .cross {
+  text-decoration: line-through;
+  color: var(--color5);
+}
+
+.product-info .price {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--color2);
+  font-weight: 500;
+}
+
+.product-rating {
+  display: flex;
+  gap: 5px;
+}
+
+.product-rating li {
+  list-style: none;
+}
+
+.product-rating li ion-icon {
+  font-size: 1.2em;
+  color: #fff700;
+}
+
+.product-item .hot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 900;
+  width: 50px;
+  height: 30px;
+  color: #d6d3d3;
+  background: var(--color2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-to-bag {
+  position: absolute;
+  bottom: 8%;
+  right: 5%;
+  padding: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--color2);
+  color: #ffffff;
+  transition: 0.3s;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.add-to-bag ion-icon {
+  font-size: 1.6em;
+}
+
+.add-to-bag:hover {
+  background: var(--color3);
+  color: var(--color2);
+}
+
+.loading-more a {
+  text-decoration: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  background: var(--color2);
+  border: 1px solid var(--color2);
+  padding: 10px 25px;
+  color: #ffffff;
+  font-weight: 300;
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  transition: 0.3s;
+}
+
+.loading-more a:hover {
+  background: var(--color3);
+  color: var(--color2);
+}
+
+/* <!-- Newsletter Signup Section --> */
+#newsletter {
+  position: relative;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  height: 120px;
+  box-shadow: 0 0 10px #00000075;
+  background: #ffffff;
+}
+
+.newsletter-box {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.newsletter-box ion-icon {
+  font-size: 2em;
+  color: var(--color2);
+}
+
+.newsletter-box h4 {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #093375;
+}
+
+#newsletter p {
+  width: 30%;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  color: #093375;
+}
+
+#newsletter .discount {
+  color: var(--color2);
+  font-size: 3em;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+#newsletter form {
+  width: 40%;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+#newsletter form input[type='text'] {
+  outline: none;
+  border: 1px solid var(--color2);
+  width: 400px;
+  padding: 10px 20px;
+}
+
+#newsletter form input[type='submit'] {
+  outline: none;
+  border: 1px solid var(--color2);
+  padding: 10px 30px;
+  background: var(--color2);
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#newsletter form input[type='submit']:hover {
+  background: #ffffff;
+  color: var(--color2);
+}
+
+/* Contact Section */
+#contact {
+  position: relative;
+  padding: 100px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#contact .map {
+  width: 100%;
+}
+
+.contact .info-wrap {
+  margin-top: 80px;
+  width: 80%;
+  color: #0e0c0c;
+  box-shadow: 0 0 25px #0e0c0c76;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .info ion-icon {
+  color: #ffffff;
+  float: left;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background: var(--color2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 80px;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #093375;
+}
+
+.contact .info p {
+  padding: 0 0 0 80px;
+  font-size: 1em;
+  font-weight: 300;
+  margin-bottom: 0;
+  color: #093375;
+}
+
+.contact .contact-form {
+  width: 80%;
+  box-shadow: 0 0 10px #000000c3;
+  background: #ffffff;
+  padding: 20px 50px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact .contact-form .form-group {
+  padding-bottom: 10px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 1em;
+  border: 1px solid var(--color2);
+  outline: none;
+}
+
+.contact .contact-form input::placeholder,
+.contact .contact-form textarea::placeholder {
+  font-size: 1em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.contact .contact-form input {
+  padding: 10px 12px;
+  height: 45px;
+}
+
+.contact .contact-form textarea {
+  display: flex;
+  justify-content: center;
+}
+
+.contact .contact-form .text-center {
+  display: flex;
+  justify-content: center;
+}
+
+.contact .contact-form button[type='submit'] {
+  background: var(--color2);
+  border: 1px solid var(--color2);
+  padding: 10px 25px;
+  color: #ffffff;
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.contact .contact-form button[type='submit']:hover {
+  background: #ffffff;
+  color: var(--color2);
+}
+
+/* Footer section */
+
+footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+  background: #000000;
+  backdrop-filter: blur(20px);
+  transition: 0.5s;
+  z-index: 1100;
+}
+
+.sci {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.3em;
+  transition: 0.3s;
+}
+
+.sci li .share {
+  padding: 10px;
+  background: var(--color2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sci li .share:hover {
+  background: #ffffff;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav li {
+  list-style: none;
+}
+
+.footer-nav li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.footer-nav li a:hover {
+  color: var(--color2);
+}
+
+.ask-us {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.ask-us p {
+  color:#ffffff;
+  font-weight: 300;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.chat{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2em;
+  padding: 10px;
+  background: var(--color2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.chat:hover {
+  background: #ffffff;
+  color: var(--color2)
+}
+
+/* Back to Top Button  */
+
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 30px;
+  background: var(--color2);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.back-to-top ion-icon{
+  font-size: 1.5em;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  
+  
+  header.header-scrolled {
+    padding: 15px 20px;
+    background:#000000;
+    backdrop-filter: blur(20px);
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .util{
+    display: none;
+  }
+
+  .menu{
+    display: block;
+  }
+
+  /* Banner Section */
+  #banner {
+    padding: 0 20px;
+  }
+
+  .women {
+    height: 40%;
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+  }
+
+  .men {
+    top: 30%;
+    left: 0;
+    height: 40%;
+    width: 100%;
+    clip-path: polygon(100% 0, 100% 100%, 50% 75%, 0% 100%, 0 0, 50% 25%);
+  }
+
+  .special {
+    top: 60%;
+    left: 0;
+    height: 40%;
+    width: 100%;
+    clip-path: polygon(50% 0, 100% 25%, 100% 100%, 0 100%, 0 25%);
+  }
+
+  #banner.left .women,
+  #banner.middle .men,
+  #banner.right .special {
+    height: 100%;
+  }
+
+  #banner.right .special {
+    top: 0;
+  }
+
+  #banner.middle .men {
+    top: 0;
+  }
+
+  #banner.left .men,
+  #banner.left .special {
+    top: 120%;
+  }
+
+  #banner.right .men,
+  #banner.right .women {
+    top: -120%;
+  }
+
+  #banner.middle .women{
+    top: -120%
+  }
+
+  #banner.middle .special{
+    top: 120%;
+  }
+
+  .switch-btn {
+    font-size: 4em;
+    margin-top: 0;
+  }
+
+  #banner.left .women img {
+    bottom: 50%;
+    left: 0%;
+    height: 50%;
+    width: 100% !important;
+  }
+
+  #banner.middle .men img,
+  #banner.right .special img {
+    left: 0;
+    top: 50%;
+    height: 50%;
+    width: 100% !important;
+  }
+
+  #banner .content h1 {
+    font-size: 2.5em;
+    font-weight: 400;
+  }
+
+  .women .content {
+    left: 20px;
+    top: 60%;
+  }
+
+  .men .content,
+  .special .content {
+    left: 20px;
+    bottom: 50%;
+  }
+
+  .reset{
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .reset ion-icon {
+    font-size: 2em;
+  }
+
+}

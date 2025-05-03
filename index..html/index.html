@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Fashion Ecommerce Full Website</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id='header'>
+        <a href="/" class='logo'>Shop</a>
+        <ul class='nav'>
+            <li><a href="#": onclick='scrollToTop();'><ion-icon name="home-outline"></ion-icon></a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#products">shopping</a></li>
+            <li><a href="#contact">contact us</a></li>
+        </ul >
+        <ul class='util'>
+            <li>
+                <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+            </li>
+            <li>
+                <a href="#"><ion-icon name="heart-outline"></ion-icon></a>
+            </li>
+            <li>
+                <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+            </li>
+            <li>
+                <a href="#"><ion-icon name="bag-outline"></ion-icon>
+                </a>
+                 <span class='number'>8</span>
+            </li>
+        
+
+        </ul>
+
+        <!-- add a new icon on mobile device view -->
+         <a href="#" class='menu' onclick='toggleMenu();'></a>
+    </header>
+
+     <!-- mobile view navigation -->
+      <ul class='nav-mobile'>
+        <li><a href="#" onclick='scrollToTop();'></a></li>
+        <li><a href="#about" onclick='toggleMenu();'>about</a></li>
+        <li><a href="#products" onclick='toggleMenu();'>shopping</a></li>
+        <li><a href="#contact" onclick='toggleMenu();'>contact us</a></li>
+      </ul>
+      
+     <!-- Hero Banner Section -->
+    <div id='banner' class='banner'>
+        <!-- left part -->
+        <div class='women'>
+            <img src="../imagesFile/women-6.jpg" alt="">
+            <a href="#"class="switch-btn" onclick="switchBanner ('left');">women</a>
+            <div class='content'>
+                <h1>Ladies'Fashion</h1>
+                <p>
+                    Embrace elegance with our women’s fashion line, where luxury meets versatility. Explore beautifully crafted dresses, tailored tops, and accessories designed to refine your everyday style. Browse the collection and redefine sophistication your way.
+                </p>
+                <a href="#">Shop around <ion-icon name="cart-outline"></ion-icon></a>
+
+            </div>
+        </div>
+        <!-- middle part -->
+        <div class='men'>
+            <img src="../imagesFile/men-5.jpg" alt="">
+            <a href="#" class='switch-btn' onclick="switchBanner ('middle');">men</a>
+            <div class='content'>
+                <h1>Men with Taste</h1>
+                <p>Unleash your style with our men’s collection—sharp suits, casual tees, and standout jackets crafted for every occasion. From bold street wear to refined classics, we’ve got the gear to define your look. Shop now and step up your wardrobe game.</p>
+                <a href="#">Shop around <ion-icon name="cart-outline"></ion-icon></a>
+
+            </div>
+        </div>
+        <!-- Right part -->
+        <div class='special'>
+            <img src="../imagesFile/special-5.jpg" alt="">
+            <a href="#" class='switch-btn' onclick="switchBanner ('right');">special</a>
+            <div class='content'>
+                <h1>Special Collection</h1>
+                <p>Stand out with our exclusive special collection—unique designs, vibrant patterns, and limited-edition pieces you won’t find anywhere else. Perfect for those who dare to be different. Explore now and grab something extraordinary before it’s gone.</p>
+                <a href="#">Shop around <ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+        </div>
+        <a href="#" class='reset' onclick='resetBanner();'><ion-icon name="power-outline"></ion-icon></a>
+    </div>
+    <!-- Main Section -->
+    <main>
+        <!-- Call Up section -->
+         
+        <section class='call-up'>
+            <div class='call-up-box'>
+               <ion-icon name="send-outline"></ion-icon>
+                <div>
+                    <h4>
+                        Free Shipping
+                    </h4>
+                    <p>Enjoy hassle-free delivery on all orders, straight to your doorstep—quick, secure, and absolutely free.</p>
+                </div>
+                </div>
+
+            </div>
+            <div class='call-up-box'>
+                <ion-icon name="card-outline"></ion-icon>
+                 <div>
+                     <h4>
+                        Guaranteed Payment
+                     </h4>
+                     <p>Not satisfied? No worries! Enjoy easy returns and a full refund within 30 days—your satisfaction is our priority.</p>
+                 </div>
+ 
+             </div>
+                <div class='call-up-box'>
+                    <ion-icon name="cash-outline"></ion-icon>
+
+                    <div>
+                        <h4>
+                            Secure Payments
+                        </h4>
+                        <p>Shop with confidence using our encrypted payment options, ensuring your transactions are safe and protected.</p>
+                    </div>
+        </section>
+        <!-- About Section -->
+         <section id='about' class='about'>
+            <div class='left'>
+                <div class='promotion about-box'>
+                    <img src="../imagesFile/sneaker-4.jpg" alt="">
+                    <div class='description'>
+                        <h4>Promotions a Discount</h4>
+                        <p>
+                            <p>Unlock special offers and limited-time discounts on the latest fashion. Don't miss out on premium style at unbeatable prices!</p>
+                        </p>
+                        <a href="#">
+                            Shop now <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class='style about-box'>
+                    <img src="../imagesFile/sunglasses-1.jpg" alt="">
+                    <div class='description'>
+                        <h4>Trending Style</h4>
+                        <p>Stay ahead of the fashion game with our newest arrivals, designed for bold statements and effortless style.</p>
+                        <a href="#">
+                            Shop now <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class='right'>
+                <div class='collection about-box'>
+                    <img src="../imagesFile/collection-1.jpg" alt="">
+                    <div class='description'>
+                        <h4>Spring Collection</h4>
+                        <p>Freshen up your wardrobe with our latest spring styles—light, breezy, and effortlessly stylish for the season.</p>
+                        <a href="#">
+                            Shop now <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class='discovery about-box'>
+                    <img src="../imagesFile/fashion-1.jpg" alt="">
+                    <div class='description'>
+                        <h4>Fashion Discovery</h4>
+                        <p>Explore a world of fashion with trendsetting pieces that redefine elegance and confidence.</p>
+                        <a href="#">
+                            Shop now <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+         </section>
+         <!-- Products Section -->
+          <section id='products' class="products">
+            <!-- product filter -->
+             <ul id='product-filters'>
+                <li data-filter='*'>All</li>
+                <li data-filter=".filter-women">Woman</li>
+                <li data-filter=".filter-men">Men</li>
+                <li data-filter=".filter-special">Special</li>
+             </ul>
+
+             <!-- Product container -->
+              <div class="product-container">
+                <!-- Product item -->
+                 <!-- This one item is for demo purpose, duplicate as many as you want, in reality, data will be mapped into the product item card -->
+                <div class="product-item filter-women">
+                    <span class='hot'>HOT</span>
+                    <img src="../imagesFile/cloth-3.jpeg" alt="">
+                    <div class="product-info">
+                        <!-- Rating 5 stars -->
+                        <ul class="product-rating">
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li> 
+                        </ul>
+                        <h4>Classic Top</h4>
+                        <p>
+                            <span class='cross'>$180.50</span>
+                            <span class='price'>$123.4</span>
+                        </p>
+                    </div>
+                    <a href="#" class='add-to-bag'>
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+                 <!-- duplicate all remaining item cards here -->
+                  <!-- make sure to give item filter accordingly -->
+                 <div class="product-item filter-men">
+                    <span class='hot'>HOT</span>
+                    <img src="../imagesFile/shoes-2.jpeg" alt="">
+                    <div class="product-info">
+                        <!-- Rating 5 stars -->
+                        <ul class="product-rating">
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                        </ul>
+                        <h4>Premium Sneakers</h4>
+                        <p>
+                            <span class='cross'>$180.50</span>
+                            <span class='price'>$123.4</span>
+                        </p>
+                    </div>
+                    <a href="#" class='add-to-bag'>
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+                <div class="product-item filter-men">
+                    <span class='hot'>HOT</span>
+                    <img src="../imagesFile/shoe-1.jpg" alt="">
+                    <div class="product-info">
+                        <!-- Rating 5 stars -->
+                        <ul class="product-rating">
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                        </ul>
+                        <h4>Corporate Shoe</h4>
+                        <p>
+                            <span class='cross'>$180.50</span>
+                            <span class='price'>$123.4</span>
+                        </p>
+                    </div>
+                    <a href="#" class='add-to-bag'>
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+                <div class="product-item filter-men">
+                    <span class='hot'>HOT</span>
+                    <img src="../imagesFile/shoes-3.jpeg" alt="">
+                    <div class="product-info">
+                        <!-- Rating 5 stars -->
+                        <ul class="product-rating">
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit amet consectetur,</h4>
+                        <p>
+                            <span class='cross'>$180.50</span>
+                            <span class='price'>$123.4</span>
+                        </p>
+                    </div>
+                    <a href="#" class='add-to-bag'>
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+                <div class="product-item filter-women">
+                    <span class='hot'>HOT</span>
+                    <img src="../imagesFile/shoes-1.png" alt="">
+                    <div class="product-info">
+                        <!-- Rating 5 stars -->
+                        <ul class="product-rating">
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit amet consectetur,</h4>
+                        <p>
+                            <span class='cross'>$180.50</span>
+                            <span class='price'>$123.4</span>
+                        </p>
+                    </div>
+                    <a href="#" class='add-to-bag'>
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+                <div class="product-item filter-men">
+                    <span class='hot'>HOT</span>
+                    <img src="../imagesFile/sneaker-4.jpg" alt="">
+                    <div class="product-info">
+                        <!-- Rating 5 stars -->
+                        <ul class="product-rating">
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit amet consectetur,</h4>
+                        <p>
+                            <span class='cross'>$180.50</span>
+                            <span class='price'>$123.4</span>
+                        </p>
+                    </div>
+                    <a href="#" class='add-to-bag'>
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+                <div class="product-item filter-women">
+                    <span class='hot'>HOT</span>
+                    <img src="../imagesFile/fashion-2.jpg" alt="">
+                    <div class="product-info">
+                        <!-- Rating 5 stars -->
+                        <ul class="product-rating">
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit amet consectetur,</h4>
+                        <p>
+                            <span class='cross'>$180.50</span>
+                            <span class='price'>$123.4</span>
+                        </p>
+                    </div>
+                    <a href="#" class='add-to-bag'>
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+                <div class="product-item filter-women">
+                    <span class='hot'>HOT</span>
+                    <img src="../imagesFile/fashion-1.jpg" alt="">
+                    <div class="product-info">
+                        <!-- Rating 5 stars -->
+                        <ul class="product-rating">
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                        </ul>
+                        <h4>Lorem ipsum dolor sit amet consectetur,</h4>
+                        <p>
+                            <span class='cross'>$180.50</span>
+                            <span class='price'>$123.4</span>
+                        </p>
+                    </div>
+                    <a href="#" class='add-to-bag'>
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+                <div class="product-item filter-special">
+                    <span class='hot'>HOT</span>
+                    <img src="../imagesFile/sunglasses-3.jpeg" alt="">
+                    <div class="product-info">
+                        <!-- Rating 5 stars -->
+                        <ui class="product-rating">
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                        </ui>
+                        <h4>Lorem ipsum dolor sit amet consectetur,</h4>
+                        <p>
+                            <span class='cross'>$180.50</span>
+                            <span class='price'>$123.4</span>
+                        </p>
+                    </div>
+                    <a href="#" class='add-to-bag'>
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+                <div class="product-item filter-special">
+                    <span class='hot'>HOT</span>
+                    <img src="../imagesFile/sunglasses-1.jpg" alt="">
+                    <div class="product-info">
+                        <!-- Rating 5 stars -->
+                        <ui class="product-rating">
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                            <li><ion-icon name="star"></ion-icon></li>
+                        </ui>
+                        <h4>Lorem ipsum dolor sit amet consectetur,</h4>
+                        <p>
+                            <span class='cross'>$180.50</span>
+                            <span class='price'>$123.4</span>
+                        </p>
+                    </div>
+                    <a href="#" class='add-to-bag'>
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </a>
+                </div>
+              </div>
+              <div class="loading-more">
+                <a href="#">
+                    Explore more <ion-icon name="arrow-forward-outline"></ion-icon>
+
+                </a>
+              </div>
+          </section>
+          <!-- Newsletter Signup Section -->
+           <section id='newsletter' class='newsletter'>
+            <div class='newsletter-box'>
+                <ion-icon name="mail"></ion-icon>
+                <h4>Sign up for newsletter</h4>
+
+            </div>
+            <p>Seasonal discount from <span class='discount'>20%</span></p>
+            <form action="">
+                <input type="text" placeholder='Email'>
+                <input type="submit">
+            </form>
+
+           </section>
+           <!-- Contact Section -->
+            <section id='contact' class='contact'>
+                <!-- Put the map of your location -->
+                <div class='map'>
+                    <iframe style="border: 0; width: 100%; height: 350px"
+                    src="https://www.google.com/maps/embed" frameborder="0"
+                    allowfullscreen></iframe>
+
+                </div>
+                <div class='info-wrap'>
+                    <div class='info'>
+                        <ion-icon name="location-outline"></ion-icon>
+                        <h4>
+                           Location:
+                       </h4>
+                       <p>
+                        123 Your Street <br/>
+                        Your City, State 4000
+                       </p>
+                    </div>
+
+                    <div class='info'>
+                        <ion-icon name="mail-outline"></ion-icon>
+
+                        <h4>
+                            Email:
+                       </h4>
+                       <p>
+                        johnjoshua@gmail.com <br/>
+                       contactjohnjoshua@gmail.com
+                       </p>
+                    </div>
+
+                    <div class='info'>
+                        <ion-icon name="call-outline"></ion-icon>
+                        <h4>
+                            Calls:
+                       </h4>
+                       <p>
+                       +13025665121</p>
+                    </div>
+
+
+                </div>
+                <form class='contact-form' action="">
+                    <div class='form-group'>
+                        <input type="text" placeholder='Your Name' required/>
+                        <input type="email" placeholder='Your Email' required/>
+                    </div>
+                    <div class='form-group'>
+                        <input type="text" placeholder='Subject' required/>
+                    </div>
+                    <div>
+                        <div class='form-group'>
+                            <textarea name="massage" rows='5' placeholder='Massage'></textarea>
+                        </div>
+                        <div class='text-center'>
+                            <button type='submit'>Send us a Massage</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+    </main>
+      <!-- Footer start after the end of main -->
+            <!-- Footer Section -->
+            <footer>
+                <ul class='sci'>
+                  <li><a href="#"><ion-icon name='logo-facebook'></ion-icon></a>
+                </li>
+                  <li><a href="#"><ion-icon name='logo-instagram'></ion-icon></a>
+                </li>
+                  <li><a href="#"><ion-icon name="logo-twitter"></ion-icon>
+                  </a></li>
+                  <li><a href="#"><ion-icon name='logo-youtube'></ion-icon></a></li>
+                  <li><a class='share' href="#"><ion-icon name='share-social-outline'></ion-icon></a></li>
+                </ul>
+                <ul class='footer-nav'>
+                    <li><a href="#">store location</a></li>
+                    <li><a href="#">opening hours</a></li>
+                    <li><a href="#">privacy terms</a></li>
+                </ul>
+                <div class='ask-us'>
+                    <p>Question?</p>
+                    <a href="#" class='chat'>
+                        <ion-icon name='chatbox-ellipses-outline'></ion-icon>
+                    </a>
+                </div>
+             </footer>
+             <!-- Back to Top Button -->
+              <a href="#" class='back-to-top' onclick='scrollToTop()'><ion-icon name="arrow-up-outline"></ion-icon>
+              </a>
+
+        <!-- Javascript Area danger!!!!! do not tamper with code -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src='../Javascript/isotope.js'></script>
+    <script src='..//Javascript/script.js'></script>
+
+           
+</body>
+</html>;
